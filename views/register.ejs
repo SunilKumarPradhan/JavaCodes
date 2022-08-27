@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(-135deg, #c850c0, #4158d0);
+            height: 87.5vh;
+        }
+
+        .container {
+            padding: 50px 20px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.679);
+            width: 700px;
+            height: 50vh;
+            margin: 80px auto;
+
+        }
+
+        #form-div {
+            text-align: center;
+        }
+
+        #form-div input {
+            text-align: center;
+            /* padding: 0.5rem; */
+            height: 2rem;
+            width: 100%;
+            border: none;
+            border-radius: 2rem;
+            background-color: #e6e6e6;
+            font-weight: bold;
+        }
+
+        #form-div input:focus {
+            /* padding: 0.5rem; */
+            /* background-color: #44b530; */
+            border: 1px solid #57b846;
+        }
+
+        #form-div button {
+            /* padding: 1rem; */
+            color: white;
+            height: 2rem;
+            width: 100%;
+            border: none;
+            border-radius: 2rem;
+            background-color: #57b846;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #form-div button:hover {
+            background-color: #44b530;
+        }
+
+        a {
+            color: #44b530;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover{
+            
+            color: #44b530;
+            text-decoration: none;
+        }
+
+        @media (max-width: 800px){
+            .container{
+                width: 500px;
+            }
+            h1{
+                font-size: 1.5rem;
+            }
+            img{
+                height: 15rem;
+            }
+        }
+        @media (max-width: 570px){
+            .container{
+                flex-direction: column;
+                width: 360px;
+            }
+            h1{
+                font-size: 1.5rem;
+            }
+            img{
+                height: 12.5rem;
+            }
+            #form-div{
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col" id="img-div">
+            <img src="./assets/images/login-img.png" alt="not found">
+        </div>
+        <div class="col" id="form-div">
+            <form action="/register" method="POST" autocomplete="off">
+                <h1>Register now !</h1>
+                <input type="text" name="personName" placeholder="Your Name"> <br><br>
+                <input type="email" name="username" placeholder="Email"> <br><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
+                <button type="submit">REGISTER</button>
+            </form>
+            <p>Already have an account ? <a href="login">LOGIN</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
